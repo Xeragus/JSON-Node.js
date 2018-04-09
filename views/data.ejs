@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Data Page</title>
+</head>
+<body>
+<% include templates/menu.ejs %>
+<h3><%= title %></h3>
+<p>App author: <%= author %></p>
+<ul>
+    <% data.forEach(function(person){ %>
+        <li><%= person.nm %> from <%= person.cty %>, <%= person.hse %>, <%= person.yrs %></li>
+    <% }); %>
+</ul>
+</body>
+</html>
